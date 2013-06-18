@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>LOSE</title>
+        <meta charset="gbk" />
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style5.css" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css' />
+		<script type="text/javascript" src="js/modernizr.custom.69142.js"></script> 
+    </head>
+    <body>
+        <div class="container">		
+            <div id="grid" class="main">
+				<div class="view">
+					<div class="view-back">
+						<span data-icon="A">test1</span>
+						<span data-icon="A">test2</span>
+						<a href="">t</a>
+					</div>
+					<img src="images/lose.jpg"/>
+				</div>
+			</div>
+        </div>
+		<script type="text/javascript">	
+			
+			Modernizr.load({
+				test: Modernizr.csstransforms3d && Modernizr.csstransitions,
+				yep : ['http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js','js/jquery.hoverfold.js'],
+				nope: 'css/fallback.css',
+				callback : function( url, result, key ) {
+						
+					if( url === 'js/jquery.hoverfold.js' ) {
+						$( '#grid' ).hoverfold();
+					}
+
+				}
+			});
+				
+		</script>
+    </body>
+</html>
