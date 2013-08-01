@@ -661,44 +661,7 @@
             a.globalCompositeOperation = b
         }
     };
-    var U = function (a) {
-            this.n = this.o = m;
-            this.g = a;
-            this.D = new P
-        },
-        eb = function () {
-            //if (!a.o) return m;
-            var b = document.createElement("button"),
-                //c = N(a.o),
-                d = 80//a.o.offsetWidth,
-                a = 30//a.o.offsetHeight;
-            navigator.userAgent.match(/iPad/) && (d = 86, a = 40);
-            b.innerHTML = "解冻", O(b, {
-                background: "#4d90fe",
-                //backgroundColor: "#4d90fe",
-                //backgroundImage: "-webkit-,-moz-,-ms-,-o-,,".split(",").join("linear-gradient(top,#4d90fe,#4787ed);"),
-                filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#4d90fe',EndColorStr='#4787ed')",
-                border: "1px solid #3079ed",
-                borderRadius: "2px",
-                webkitBorderRadius: "2px",
-                mozBorderRadius: "2px",
-                color: "white",
-                fontSize: "11px",
-                fontWeight: "bold",
-                textAlign: "center",
-                position: "fixed",
-                top: 100 + "px",
-                right: 100 + "px",
-                width: d + "px",
-                height: a + "px",
-                padding: "0 8px",
-                zIndex: 1201,
-                opacity: 1
-            }, 30 < a && O(b, {
-                fontSize: "15px"
-            }));
-            return b
-        };
+    
     U.prototype.qa = function (a) {
         //var b = this.o = document.getElementById("gbqfb") || document.getElementById("sblsbb") || document.getElementsByName("btnG")[0];
         //if (this.o) {
