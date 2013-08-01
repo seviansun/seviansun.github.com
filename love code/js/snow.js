@@ -4,6 +4,7 @@
         m = null,
         o = !1,
         p, q = this,
+        google = {},
         r = function (a) {
             var b = typeof a;
             if ("object" == b) if (a) {
@@ -665,20 +666,17 @@
             this.g = a;
             this.D = new P
         },
-        eb = function (a) {
-            if (!a.o) return m;
+        eb = function () {
+            //if (!a.o) return m;
             var b = document.createElement("button"),
-                c = N(a.o),
-                d = a.o.offsetWidth,
-                a = a.o.offsetHeight;
+                //c = N(a.o),
+                d = 80//a.o.offsetWidth,
+                a = 30//a.o.offsetHeight;
             navigator.userAgent.match(/iPad/) && (d = 86, a = 40);
-            document.getElementById("skb") ? (b.className = "lsbb", O(b, {
-                fontSize: "15px",
-                background: "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAmCAYAAAAFvPEHAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAAAAAAAA+UO7fwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAl2cEFnAAAAJgAAACYAB/nYBgAAADFJREFUCNd9jDEKACAQw0L//17BKW4iR3ErbVL20ihE4EkgdVAIo7swBe6av7+pWYcD6Xg4BFIWHrsAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTEtMTItMTNUMTA6MTE6MjctMDg6MDD1wN6AAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDExLTEyLTEzVDEwOjExOjI3LTA4OjAwhJ1mPAAAAABJRU5ErkJggg==') repeat-x",
-                color: "#374A82"
-            }), b.innerHTML = "\u2652", c.y -= 1) : (b.innerHTML = "Defrost", O(b, {
-                backgroundColor: "#4d90fe",
-                backgroundImage: "-webkit-,-moz-,-ms-,-o-,,".split(",").join("linear-gradient(top,#4d90fe,#4787ed);"),
+            b.innerHTML = "解冻", O(b, {
+                background: "#4d90fe",
+                //backgroundColor: "#4d90fe",
+                //backgroundImage: "-webkit-,-moz-,-ms-,-o-,,".split(",").join("linear-gradient(top,#4d90fe,#4787ed);"),
                 filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#4d90fe',EndColorStr='#4787ed')",
                 border: "1px solid #3079ed",
                 borderRadius: "2px",
@@ -689,37 +687,39 @@
                 fontWeight: "bold",
                 textAlign: "center",
                 position: "fixed",
-                top: c.y + "px",
-                left: c.x + "px",
+                top: 100 + "px",
+                right: 100 + "px",
                 width: d + "px",
                 height: a + "px",
                 padding: "0 8px",
                 zIndex: 1201,
-                opacity: 0
-            }), 30 < a && O(b, {
+                opacity: 1
+            }, 30 < a && O(b, {
                 fontSize: "15px"
             }));
             return b
         };
     U.prototype.qa = function (a) {
-        var b = this.o = document.getElementById("gbqfb") || document.getElementById("sblsbb") || document.getElementsByName("btnG")[0];
-        if (this.o) {
-            this.n = eb(this);
-            this.D.M = this.n;
-            Ua(this.D, function () {
-                b.style.visibility = "hidden"
-            });
-            var c = this.o.parentNode;
-            if (c && "sbds" == c.id) c.style.width = c.offsetWidth + "px";
+        //var b = this.o = document.getElementById("gbqfb") || document.getElementById("sblsbb") || document.getElementsByName("btnG")[0];
+        //if (this.o) {
+            this.n = eb();
+            //this.D.M = this.n;
+            //Ua(this.D, function () {
+                //b.style.visibility = "hidden"
+            //});
+            //var c = this.o.parentNode;
+            //if (c && "sbds" == c.id) c.style.width = c.offsetWidth + "px";
             this.g.k(this.n, "click", a);
             document.body.insertBefore(this.n, document.body.firstChild)
-        }
+        //}
     };
     U.prototype.detach = function () {
-        if (this.o && this.n) this.n.parentNode.removeChild(this.n), this.n = m, this.o.style.visibility = "visible"
+        //if (this.o && this.n) this.n.parentNode.removeChild(this.n), this.n = m, this.o.style.visibility = "visible"
+        if (this.n) this.n.parentNode.removeChild(this.n), this.n = m
     };
     U.prototype.pa = function () {
-        if (this.o && this.n) {
+        //if (this.o && this.n) {
+        if (this.n) {
             var a = N(this.o);
             this.n.style.top = a.y + "px";
             this.n.style.left = a.x + "px"
@@ -924,7 +924,9 @@
     X.prototype.init = function () {
         var a = this,
             b = function () {
-                document.getElementById("snfloader_script") && (!document.getElementById("foot") && !document.getElementById("bfoot") ? window.setTimeout(b, 50) : (google.rein && google.dstr && (google.rein.push(v(a.Aa, a)), google.dstr.push(v(a.Pa, a))), a.Aa()))
+                //document.getElementById("snfloader_script") && (!document.getElementById("foot") && !document.getElementById("bfoot") ? window.setTimeout(b, 50) : (google.rein && google.dstr && (google.rein.push(v(a.Aa, a)), google.dstr.push(v(a.Pa, a))), a.Aa()))
+
+                a.Aa();
             };
         b()
     };
@@ -959,11 +961,12 @@
             });
             document.body.insertBefore(this.A, document.body.firstChild);
             this.K = new R(this.A);
-            this.i = new Ya(this.g, this.h, 0, 0);
+            //this.i = new Ya(this.g, this.h, 0, 0); //fog
+            this.i = new Ya(this.g, this.g, 0, 0);
             this.F = new V(this.g, this.i);
             this.J = new U(this.g);
             a = v(this.K.Ca, this.K);
-            this.g.k(window, "resize", v(this.N, this));
+            //this.g.k(window, "resize", v(this.N, this));
             this.g.k(window, "deviceorientation", a);
             this.g.k(window, "MozOrientation", a);
             this.R = this.h.getContext("2d");
