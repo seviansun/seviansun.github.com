@@ -661,7 +661,11 @@
             a.globalCompositeOperation = b
         }
     };
-    
+    var U = function (a) {
+            this.n = this.o = m;
+            this.g = a;
+            this.D = new P
+        },
     U.prototype.qa = function (a) {
         //var b = this.o = document.getElementById("gbqfb") || document.getElementById("sblsbb") || document.getElementsByName("btnG")[0];
         //if (this.o) {
