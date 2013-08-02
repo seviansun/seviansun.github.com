@@ -661,37 +661,6 @@
             a.globalCompositeOperation = b
         }
     };
-    var U = function (a) {
-            this.n = this.o = m;
-            this.g = a;
-            this.D = new P
-        },
-    U.prototype.qa = function (a) {
-        //var b = this.o = document.getElementById("gbqfb") || document.getElementById("sblsbb") || document.getElementsByName("btnG")[0];
-        //if (this.o) {
-            this.n = eb();
-            //this.D.M = this.n;
-            //Ua(this.D, function () {
-                //b.style.visibility = "hidden"
-            //});
-            //var c = this.o.parentNode;
-            //if (c && "sbds" == c.id) c.style.width = c.offsetWidth + "px";
-            this.g.k(this.n, "click", a);
-            document.body.insertBefore(this.n, document.body.firstChild)
-        //}
-    };
-    U.prototype.detach = function () {
-        //if (this.o && this.n) this.n.parentNode.removeChild(this.n), this.n = m, this.o.style.visibility = "visible"
-        if (this.n) this.n.parentNode.removeChild(this.n), this.n = m
-    };
-    U.prototype.pa = function () {
-        //if (this.o && this.n) {
-        if (this.n) {
-            var a = N(this.o);
-            this.n.style.top = a.y + "px";
-            this.n.style.left = a.x + "px"
-        }
-    };
     var V = function (a, b) {
             this.i = b;
             this.g = a;
